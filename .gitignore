@@ -5,6 +5,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 
 # =========================
@@ -13,6 +14,7 @@ __pycache__/
 
 venv/
 env/
+.env
 .venv/
 
 
@@ -72,3 +74,4 @@ build/
 # =========================
 
 *.sql
+db.sqlite3
