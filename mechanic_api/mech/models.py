@@ -9,11 +9,12 @@ class Mechanic(models.Model):           #databse table definition
         message="Phone number must be exactly 10 digits."
     )
 
+    #all the values which do not have default values will be automatically required by django
     name = models.CharField(max_length=100)
     phone = models.CharField(max_length=10, validators=[phone_validator])
     location = models.CharField(max_length=255)
-    rating = models.DecimalField(max_digits=3, decimal_places=1, default=0.0)
-    is_open = models.BooleanField(default=True)
+    rating = models.DecimalField(max_digits=3, decimal_places=1, default=0.0)       #because we have defualt value, user can have value missing
+    is_open = models.BooleanField(default=True)     #because we have defualt value, user can have value missing
     services = models.CharField(
         max_length=500,
         help_text="Comma-separated list of services, e.g. 'Oil Change, Tire Repair'"
