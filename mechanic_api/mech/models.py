@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import RegexValidator
 
-#making the databases here
+#making the database schema here
 
 class Mechanic(models.Model):           #databse table definition
     phone_validator = RegexValidator(           #checks for exactly 10 digits in the phone number
